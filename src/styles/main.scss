@@ -4,6 +4,9 @@
 @use 'plans';
 @use 'available-devices';
 @use 'faq';
+@use 'footer';
+@use 'header';
+@use 'sass:color';
 
 @font-face {
     font-family: Avenir;
@@ -22,6 +25,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -111,25 +115,25 @@ body {
     cursor: pointer;
 
     &:hover {
-       // background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
+       background-color: color.scale(variaveis.$corDeFundoBotaoPrimario, 3%);
     }
 
     &--secondary {
-        //background-color: variaveis.$corDeFundoBotaoSecundario;
-        //border-color: variaveis.$corDeFundoBotaoSecundario;
+        background-color: variaveis.$corDeFundoBotaoSecundario;
+        border-color: variaveis.$corDeFundoBotaoSecundario;
 
         &:hover {
-           // background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+           background-color: color.scale(variaveis.$corDeFundoBotaoSecundario, 3%);
         }
     }
 
     &--dark {
-        //background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
-        //border-color: variaveis.$corTextoSecundario;
+        background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundario;
 
         &:hover {
-           // background-color: variaveis.$corTextoSecundario;
-            //color: variaveis.$corDeFundo;
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
         }
     }
 }
